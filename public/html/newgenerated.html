@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/static/css/style.css">
+    <link rel="stylesheet" href="/public/static/css/newgenerated.css">
+</head>
+<body>
+    <div class="title-panel">
+    <div class="panel-logo">
+        <img src="/images/dark_logo.png" class="logo" alt="NexControl">
+    </div>
+    <div class="panel">
+        <h1 class="panel_h1">NexControl</h1>
+    </div>
+    <div class="panel-buttons">
+        <a href="#" class="nav-btn">O nas</a>
+        <a href="newgenerated.html" class="nav-btn">Nowy wpis (generowanie)</a>
+        <a href="#" class="nav-btn">Nowy wpis (rozliczenie)</a>
+        <a href="nexcontrol/auth/logout.php" class="nav-btn logout">Wyloguj</a>
+    </div>
+    </div>
+    <div class="newgenerated, card-form">
+    <h3>Wprowadź dane dotyczące prądu wygenerowanego</h3>
+    <form action="../php/form/newgenerated.php" method="post" id="newgen">
+        <label for="day">Wprowadź datę</label>
+        <input type="date" name="day" id="day" required><br>
+        <label for="generated">Wprowadź ilość prądu wygenerowanego (kWh)</label>
+        <input type="number" name="generated" id="generated" step="0.01" required><br>
+        <label for="weather">Opisz jaka była pogoda</label>
+        <textarea name="weather" id="weather" placeholder="słonecznie/deszczowo/pochmurno/..." style="resize:none" cols="35px" required ></textarea><br>
+        <label for="storage">Wprowadź stan magazynu z rozliczenia</label>
+         <input type="number" name="storage" id="storage" required><br>
+        <button type="submit">Utwórz wpis</button>
+    </form>
+</div>
+</body>
+</html>

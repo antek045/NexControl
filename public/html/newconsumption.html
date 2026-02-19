@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/static/css/style.css">
+    <link rel="stylesheet" href="/public/static/css/neconsumption.css">
+</head>
+<body>
+    <div class="title-panel">
+    <div class="panel-logo">
+        <img src="/images/dark_logo.png" class="logo" alt="NexControl">
+    </div>
+
+    <div class="panel">
+        <h1 class="panel_h1">NexControl</h1>
+    </div>
+
+    <div class="panel-buttons">
+        <a href="#" class="nav-btn">O nas</a>
+        <a href="newgenerated.html" class="nav-btn">Nowy wpis (generowanie)</a>
+        <a href="#" class="nav-btn">Nowy wpis (rozliczenie)</a>
+        <a href="nexcontrol/auth/logout.php" class="nav-btn logout">Wyloguj</a>
+
+    </div>
+</div>
+    <div class="newconsumption, card-form">
+    <h3>Wprowadź dane dotyczące prądu pobranego</h3>
+    <form action="../php/form/newconsumption.php" method="post" id="newgen">
+        <label for="day">Wprowadź datę początkową</label>
+        <input type="date" name="day" id="day" required><br>
+        <label for="counter_reading">Wprowadź stan licznika</label>
+        <input type="number" name="counter_reading" id="counter_reading" step="0.001" required><br>
+        
+        <button type="submit">Utwórz wpis</button>
+    </form>
+</div>
+</body>
+</html>
